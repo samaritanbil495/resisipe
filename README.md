@@ -1,2 +1,2 @@
 # resisipe
-food recipe sharing web application
+food recipe sharing web and mobile application. 
