@@ -1,1 +1,5 @@
+<h1><%= @recipe.recipe_name %></h1>
+<h4>"<%= @recipe.recipe_detail %>"</h4>
+<h4>"<%= @recipe.recipe_ingredients %>"</h4>
+<h4>"<%= @recipe.recipe_tags %>"</h4>
 <%= link_to 'Remove', @recipe, method: :delete, data: { confirm: 'Are you sure?' } %>
