@@ -28,7 +28,9 @@ class RecipesController < ApplicationController
   end
 
   def destroy
+    @recipe.destroy
 
+    redirect_to recipes_path
   end
 
   private
