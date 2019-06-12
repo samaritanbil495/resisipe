@@ -1,0 +1,19 @@
+<h3>Create a Recipe</h3>
+<%= form_with model: @recipe do |form| %>
+  <%= form.text_field :recipe_name, placeholder: "Recipe Name" %>
+  <%= form.text_field :recipe_detail, placeholder: "Detail" %>
+  <%= form.text_field :recipe_ingredients, placeholder: "Ingredients" %>
+  <%= form.text_field :recipe_tags, placeholder: "Tags" %>
+  
+
+  <%= form.submit %>
+<% end %>
+
+<!-- <%= form_for @recipe do |form| %>
+  <%= form.text_field :recipe_name, placeholder: 'Recipe Name' %>
+  <%= form.text_field :recipe_detail, placeholder: 'Detail' %>
+  <%= form.text_field :recipe_ingredients, placeholder: 'Ingredients' %>
+  <%= form.text_field :recipe_tags, placeholder: 'Tags' %>
+  
+  <%= form.submit %>
+<% end %> -->
