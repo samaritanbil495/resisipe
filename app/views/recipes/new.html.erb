@@ -31,16 +31,24 @@
   </head>
   <body>
 
+
+      
     
         <div class="carousel-item active">
                 <%= image_tag("spices.jpg", :style => 'z-index: -1;')%>
          </div>
-            
-          <form class="needs-validation" novalidate>
+       
+        <div class= "needs-validation">
+          <h3> Let's share your recipe with us ! </h3>
+            <%= form_with model: @recipe do |form| %>
+              
+          <%# <form class="needs-validation" novalidate> %>
                 <div class="form-row">
                   <div class="col-md-4 mb-3">
-                    <label for="validationTooltip01">Recipe Name</label>
-                    <input type="text" class="form-control" id="validationTooltip01"  placeholder="First name" value="Pancake" required>
+                    <%= form.text_field :recipe_name, placeholder: "Recipe Name" %>
+
+                    <%# <label for="validationTooltip01">Recipe Name</label> %>
+                    <%# <input type="text" class="form-control" id="validationTooltip01"  placeholder="First name" value="Pancake" required> %>
                     <div class="valid-tooltip">
                       Looks good!
                     </div>
@@ -48,8 +56,22 @@
                 </div>
                   <div class="form-row">
                   <div class="col-md-4 mb-3">
-                    <label for="validationTooltip02">Recipe Details</label>
-                    <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Take a cup,break egg into the cup..." required>
+                    <%= form.text_field :recipe_detail, placeholder: "Detail" %>
+
+                    <%# <label for="validationTooltip02">Recipe Details</label> %>
+                    <%# <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Take a cup,break egg into the cup..." required> %>
+                    <div class="valid-tooltip">
+                      Looks good!
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="col-md-4 mb-3">
+                    <%= form.text_field :recipe_tags, placeholder: "Tags" %>
+
+                    <%# <label for="validationTooltip02">Recipe Details</label> %>
+                    <%# <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Take a cup,break egg into the cup..." required> %>
                     <div class="valid-tooltip">
                       Looks good!
                     </div>
@@ -58,8 +80,10 @@
             
                 <div class="form-row">
                   <div class="col-md-4 mb-3">
-                    <label for="validationTooltip03">Ingredients</label>
-                    <input type="text" class="form-control" id="validationTooltip03" placeholder="Olive oil,potata..." required>
+                    <%= form.text_field :recipe_ingredients, placeholder: "Ingredients" %>
+
+                    <%# <label for="validationTooltip03">Ingredients</label> %>
+                    <%# <input type="text" class="form-control" id="validationTooltip03" placeholder="Olive oil,potata..." required> %>
                     <div class="invalid-tooltip">
                       Please provide a valid city.
                     </div>
@@ -76,9 +100,7 @@
                   </div>
                 </div>
                 
-                <div class="form-row">
-                <button class="btn btn-primary" type="submit" style="z-index: 3">Submit form</button>
-                </div>
+         
                
                 <style>
                 
@@ -92,7 +114,8 @@
                     border: 1px solid blue;
                 }
                  
-                
+                </style>
+                <style>
                 .needs-validation{
 
                     position: absolute;
@@ -106,30 +129,13 @@
                 }
                 </style>
             
-              </form>
-            </div>  
+             <%= form.submit %>
+            <% end %>
+            </div> 
+            </div> 
 
              
   </body>
     
 </html>
 
-
-<%= form_with model: @recipe do |form| %>
-  <%= form.text_field :recipe_name, placeholder: "Recipe Name" %>
-  <%= form.text_field :recipe_detail, placeholder: "Detail" %>
-  <%= form.text_field :recipe_ingredients, placeholder: "Ingredients" %>
-  <%= form.text_field :recipe_tags, placeholder: "Tags" %>
-  
-
-  <%= form.submit %>
-<% end %>
-
-<!-- <%= form_for @recipe do |form| %>
-  <%= form.text_field :recipe_name, placeholder: 'Recipe Name' %>
-  <%= form.text_field :recipe_detail, placeholder: 'Detail' %>
-  <%= form.text_field :recipe_ingredients, placeholder: 'Ingredients' %>
-  <%= form.text_field :recipe_tags, placeholder: 'Tags' %>
-  
-  <%= form.submit %>
-<% end %> -->
