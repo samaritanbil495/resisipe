@@ -39,6 +39,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (8.0.0)
+    bindex (0.7.0)
     builder (3.2.3)
     byebug (11.0.1)
     coffee-rails (4.2.2)
@@ -50,7 +51,6 @@ GEM
     coffee-script-source (1.8.0)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
-    debug_inspector (0.0.3)
     erubi (1.8.0)
     execjs (2.7.0)
     ffi (1.11.1-x86-mingw32)
@@ -125,8 +125,8 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
-    turbolinks (5.0.1)
-      turbolinks-source (~> 5)
+    turbolinks (5.2.0)
+      turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
@@ -134,10 +134,11 @@ GEM
       tzinfo (>= 1.0.0)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
-    web-console (3.3.0)
-      activemodel (>= 4.2)
-      debug_inspector
-      railties (>= 4.2)
+    web-console (3.7.0)
+      actionview (>= 5.0)
+      activemodel (>= 5.0)
+      bindex (>= 0.4.0)
+      railties (>= 5.0)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
@@ -160,4 +161,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   2.0.1
+   1.15.3
