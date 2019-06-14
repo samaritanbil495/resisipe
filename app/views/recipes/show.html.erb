@@ -1,5 +1,58 @@
-<h1><%= @recipe.recipe_name %></h1>
-<h4>"<%= @recipe.recipe_detail %>"</h4>
-<h4>"<%= @recipe.recipe_ingredients %>"</h4>
-<h4>"<%= @recipe.recipe_tags %>"</h4>
-<%= link_to 'Remove', @recipe, method: :delete, data: { confirm: 'Are you sure?' } %>
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+            <a class="navbar-brand" >
+              <%=link_to 'Home Page',"/recipes/",{:style=>'color:#FFFFFF;', :class => "css_class"}%>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" >
+              <%=link_to 'Add Recipe',"/recipes/new",{:style=>'color:#FFFFFF;', :class => "css_class"}%>
+            </a>
+            <a class="navbar-brand" >
+              <%=link_to 'Recipes',"/recipes/show",{:style=>'color:#FFFFFF;', :class => "css_class"}%>
+            </a>
+          </nav>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+
+    <body>
+
+  <div class="card" style="width: 50rem; position: absolute;
+                    bottom: 50px;
+                    right: 350px;
+                    resize: both;
+                    overflow: auto;
+                    height: 600px;">
+    
+     <h5 class="card-header"><strong><%= @recipe.recipe_name %></strong></h5>
+      <div class="card-body">
+        <h5 class="card-title">Ingredients: <%= @recipe.recipe_ingredients %></h5>
+         
+          <p class="card-text">How to make ?<br><%= @recipe.recipe_detail %></p>
+          
+          <br>
+          <h6> Tags : <%= @recipe.recipe_tags %></h6>
+          <br>
+          <%= link_to 'Remove' , @recipe, method: :delete, data: { confirm: 'Are you sure delete this recipe?' } %>
+          <%=link_to 'Edit',{:action => "edit", :controller => "recipes", :anchor => "id" },{:style=>'padding: 30px;', :class => "css_class"}%>
+          </body>
+  </div>
+</div>
+
+
+
+</html>
