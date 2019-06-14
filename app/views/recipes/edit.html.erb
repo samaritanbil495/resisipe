@@ -1,10 +1,97 @@
-<h3>Update Recipe</h3>
-<%= form_with model: @recipe do |form| %>
-  <%= form.text_field :recipe_name, placeholder: "Recipe Name" %>
-  <%= form.text_field :recipe_detail, placeholder: "Detail" %>
-  <%= form.text_field :recipe_ingredients, placeholder: "Ingredients" %>
-  <%= form.text_field :recipe_tags, placeholder: "Tags" %>
+<!doctype html>
+<html lang="en">
+  <head>
   
+    <title>Title</title>
 
-  <%= form.submit %>
-<% end %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+            <a class="navbar-brand" >
+              <%=link_to 'Home Page',"/recipes/",{:style=>'color:#FFFFFF;', :class => "css_class"}%>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" >
+              <%=link_to 'Add Recipe',"/recipes/new",{:style=>'color:#FFFFFF;', :class => "css_class"}%>
+            </a>
+            <a class="navbar-brand" >
+              <%=link_to 'Recipes',"/recipes/show",{:style=>'color:#FFFFFF;', :class => "css_class"}%>
+            </a>
+          </nav>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+ 
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="carousel-item active">
+                <%= image_tag("edit.jpg", :style => 'z-index: -1;background-position: center right;')%>
+  </div>
+</body>
+
+<body>
+
+  
+<div class="container">
+
+      <%= form_with model: @recipe do |form| %>
+     <div class="form-row">
+    <div class="col-sm-4">
+      <h3><strong>Recipe Name
+      
+        <style>
+         h3{
+           color:white;
+         }
+         </style> </strong></h3>        
+       <%= form.text_field :recipe_name, placeholder: "Recipe Name" %>
+    </div>
+    
+    <div class="col-sm-4">
+      <h3>Ingredients</h3>        
+      <%= form.text_field :recipe_ingredients, placeholder: "Ingredients" %>
+    </div>
+    </div>
+    <div class="form-row">
+    <div class="col-sm-4">
+      <h3>Detail</h3>        
+       <%= form.text_field :recipe_detail, placeholder: "Detail" %>
+    </div>
+    
+    <div class="col-sm-4">
+      <h3>Tags</h3>        
+      <%= form.text_field :recipe_tags, placeholder: "Tags" %>
+    </div>
+    </div>
+      <%= form.submit %>
+    <% end %> 
+    <style>
+      .container{
+        position: absolute;
+                   padding: 120px;
+                   right: 1px;
+                   bottom:1px;
+        z-index:10000000000;
+              
+      }
+    </style>
+</div>
+
+</div>
+</body>
+</html>
+
