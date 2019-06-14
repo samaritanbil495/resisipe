@@ -43,7 +43,6 @@
         <h5 class="card-title">Ingredients: <%= @recipe.recipe_ingredients %></h5>
          
           <p class="card-text">How to make ?<br><%= @recipe.recipe_detail %></p>
-         <%= image_tag(@recipe.image.url, alt:'Image') if @recipe.image?%>
           <br>
           <h6> Tags : <%= @recipe.recipe_tags %></h6>
           <br>
