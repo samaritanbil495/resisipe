@@ -18,5 +18,12 @@ class AndrecipesController < ApplicationController
   end
 
   def edit
+    @recipe.update(recipe_params)
   end
+  
+  def update
+    @recipe.update(recipe_params)
+  end
+  
+  
 end
