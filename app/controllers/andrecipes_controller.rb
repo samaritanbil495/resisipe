@@ -1,4 +1,5 @@
 class AndrecipesController < ApplicationController
+  skip_before_action :verify_authenticity_token
   def index
     @recipes = Recipe.all
 
@@ -7,8 +8,13 @@ class AndrecipesController < ApplicationController
 
   def show
   end
+  
+  def recipe_params
+    params.require(:recipe).permit(:recipe_name, :recipe_detail, :recipe_ingredients, :recipe_tags)
+  end
 
   def new
+      Recipe.create(recipe_params)
   end
 
   def edit
