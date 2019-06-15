@@ -46,7 +46,7 @@
           <br>
           <h6> Tags : <%= @recipe.recipe_tags %></h6>
           <br>
-          <%= link_to 'Remove' , @recipe, method: :delete, data: { confirm: 'Are you sure delete this recipe?' } %>
+          <%= link_to 'Remove' , recipe_path(@recipe), method: :delete, data: { confirm: 'Are you sure delete this recipe?' } %>
           <%=link_to 'Edit',{:action => "edit", :controller => "recipes", :anchor => "id" },{:style=>'padding: 30px;', :class => "css_class"}%>
           </body>
   </div>
