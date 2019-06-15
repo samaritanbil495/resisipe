@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'andrecipes/show'
 
-  get 'andrecipes/new'
+  post 'andrecipes/new'
 
   get 'andrecipes/edit'
 
