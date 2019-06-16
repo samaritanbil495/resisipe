@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
   before_action :current_recipe, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token
   def index
-    @recipes = Recipe.all
+     @recipes = Recipe.searchTag(params[:searchTag])
   end
 
   def show
@@ -38,7 +38,7 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:recipe_name, :recipe_detail, :recipe_ingredients, :recipe_tags, :image)
+    params.require(:recipe).permit(:recipe_name, :recipe_detail, :recipe_ingredients, :recipe_tags, :image, :search)
   end
 
   def current_recipe
