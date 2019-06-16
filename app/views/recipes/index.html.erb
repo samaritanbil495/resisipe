@@ -8,24 +8,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+
+
+
             <a class="navbar-brand" >
-              <%=link_to 'Home Page',"/recipes/",{:style=>'color:#FFFFFF;', :class => "css_class"}%>
+              <%=link_to 'Home Page',"/recipes/",{:style=>'color:#FFFFFF;border-style:solid;width:100px;text-align:center', :class => "css_class"}%>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" >
-              <%=link_to 'Add Recipe',"/recipes/new",{:style=>'color:#FFFFFF;', :class => "css_class"}%>
-            </a>
-            <a class="navbar-brand" >
-              <%=link_to 'Recipes',"/recipes/show",{:style=>'color:#FFFFFF;', :class => "css_class"}%>
+              <%=link_to 'Add Recipe',"/recipes/new",{:style=>'color:#FFFFFF;border-style:solid;width:100px;text-align:center', :class => "css_class"}%>
             </a>
 
-            <a class="navbar-brand" >
+
+            <a class="navbarbtn" >
+
+
             <%= form_tag(recipes_path,method: :get) do%>
-            <%= text_field_tag(:searchTag, params[:searchTag])%>
-            <%= submit_tag ("SearchTag")%>
+            <%= text_field_tag(:searchTag, params[:searchTag],{:style=>'background-color:white;border-color:black;height:30px;width:200px'})%>
+            <%= submit_tag ("Search Tag"),{:style=>'background-color:white;border-color:black;text-color:black;font:bold 15px arial;margin-top:5px'}%>
             <% end %>
+
+            <style>
+              .navbarbtn{
+                  position:absolute;
+                  right:40px;
+
+               }
+            </style>
             </a>
       </nav>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -40,7 +51,7 @@
   </body>
   <body>
         <div class="carousel-item active">
-          <%= image_tag("table.jpg", :style => 'z-index: -1;')%>
+          <%= image_tag("table.jpg", :style => 'z-index: -1')%>
             <%# <img src="img/table.jpg" class="img-fluid" alt="Responsive image"> %>
         </div>
         <div class="text-block">
@@ -50,18 +61,21 @@
 
                   /* Bottom right text */
                   .text-block {
-                    position: absolute;
-                    bottom: 300px;
-                    right: 1000px;
+                    position:relative;
+                    align:center;
+                    bottom:200px;
+                    top:200px;
                     height: 300px;
                     color: white;
                     padding-left: 200px;
                     padding-right: 200px;
+
                   }
             </style>
                 <h6><strong>Delicious food area
                     <style>
                         h6{
+                            position:relative;
                             font-size: 40px;
                         }
 
