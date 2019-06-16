@@ -1,13 +1,26 @@
 
-# :spaghetti: Resisipe Application for Web and Android 
-```
-In this project we are aiming to make an application for sharing food recipes.
-```
+# :spaghetti: Resisipe Web Application
+## What's Resisipe?
+Resisipe is a web-application a social platform that includes food recipes.
+http://resisipe.herokuapp.com/recipes/
 
 
-How do we design structure for this application?
-- Idea 1:
-![alt text](https://ravened.files.wordpress.com/2014/08/architecture.png?w=646&zoom=2)
+![Sample App Image](https://github.com/samaritanbil495/resisipe/blob/master/screenshots/home-page.PNG)
 
-heroku: https://secure-brushlands-89470.herokuapp.com/recipes/
+![Sample App Image](https://github.com/samaritanbil495/resisipe/blob/master/screenshots/add-page.PNG)
 
+![Sample App Image](https://github.com/samaritanbil495/resisipe/blob/master/screenshots/view-page.PNG)
+
+![Sample App Image](https://github.com/samaritanbil495/resisipe/blob/master/screenshots/edit-page.PNG)
+
+## MVC Architecture in Rails:
+![alt text](https://cdn-images-1.medium.com/max/2200/1*c-RQ7L-RQYBhOeZsTES_XQ.jpeg)
+
+
+## Contributors
+
+- Aslı Ural
+- Ayça Gürleyik
+- Tuna Akyürek
+- Melih Mete
+- Ediz Uslu
