@@ -17,6 +17,23 @@
               <%=link_to 'Add Recipe',"/recipes/new",{:style=>'color:#FFFFFF;border-style:solid;width:100px;text-align:center', :class => "css_class"}%>
             </a>
 
+            <a class="navbarbtn" >
+
+
+            <%= form_tag(recipes_path,method: :get) do%>
+            <%= text_field_tag(:searchTag, params[:searchTag],{:style=>'background-color:white;border-color:black;height:30px;width:200px'})%>
+            <%= submit_tag ("Search Tag"),{:style=>'background-color:white;border-color:black;text-color:black;font:bold 15px arial;margin-top:5px'}%>
+            <% end %>
+
+            <style>
+              .navbarbtn{
+                  position:absolute;
+                  right:40px;
+
+               }
+            </style>
+            </a>
+
           </nav>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
@@ -57,7 +74,7 @@
           <div class=rm>
           <%= link_to 'Remove' , recipe_path(@recipe), method: :delete, data: { confirm: 'Are you sure delete this recipe?' } %>
           <%=link_to 'Edit  ',{:action => "edit", :controller => "recipes", :anchor => "id" }%>
-          
+
 
           </div>
           <br>
