@@ -22,7 +22,7 @@
   </head>
   <body>
     <div class="carousel-item active">
-                  <%= image_tag("white.jpg", :style => 'z-index: -1;background-position: center right;')%>
+                  <%= image_tag("odun.jpg", :style => 'z-index: -1;background-position: center right;')%>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -42,16 +42,31 @@
 
      <h5 class="card-header"><strong><%= @recipe.recipe_name %></strong></h5>
       <div class="card-body">
-        <h5 class="card-title">Ingredients: <%= @recipe.recipe_ingredients %></h5>
-
-          <p class="card-text">How to make ?<br><%= @recipe.recipe_detail %></p>
-
+        <h5 class="card-title "><strong>Ingredients:</strong> </h5>
+         <%= @recipe.recipe_ingredients %>
+         <br>
+         <br>
+          <h5 class="card-text"><strong>How to make ?</strong><br></h5>
+          <%= @recipe.recipe_detail %>
           <br>
-          <h6> Tags : <%= @recipe.recipe_tags %></h6>
           <br>
+          <h5 class= "card-text"><strong> Tags :</strong> </h5>
+          <%= @recipe.recipe_tags %>
+          <br>
+          <br>
+          <div class=rm>
           <%= link_to 'Remove' , recipe_path(@recipe), method: :delete, data: { confirm: 'Are you sure delete this recipe?' } %>
-          <%=link_to 'Edit',{:action => "edit", :controller => "recipes", :anchor => "id" },{:style=>'padding: 30px;', :class => "css_class"}%>
+          <%=link_to 'Edit  ',{:action => "edit", :controller => "recipes", :anchor => "id" }%>
+          
 
+          </div>
+          <br>
+          <style>
+              .card-header {
+                  background-color: black;
+                  color:white;
+              }
+          </style>
   </div>
 </div>
 
