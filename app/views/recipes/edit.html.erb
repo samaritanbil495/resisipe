@@ -74,33 +74,35 @@
            color:white;
          }
          </style> </strong></h3>
-       <%= form.text_field :recipe_name, placeholder: "Recipe Name" %>
+       <%= form.text_field :recipe_name, placeholder: "Recipe Name",:style => 'width:200px;height:100px' %>
     </div>
 
     <div class="col-sm-4">
       <h3>Ingredients</h3>
-      <%= form.text_field :recipe_ingredients, placeholder: "Ingredients" %>
+      <%= form.text_field :recipe_ingredients, placeholder: "Ingredients",:style => 'width:200px;height:100px' %>
     </div>
     </div>
     <div class="form-row">
     <div class="col-sm-4">
       <h3>Detail</h3>
-       <%= form.text_field :recipe_detail, placeholder: "Detail" %>
+       <%= form.text_field :recipe_detail, placeholder: "Detail",:style => 'width:200px;height:100px' %>
     </div>
 
     <div class="col-sm-4">
       <h3>Tags</h3>
-      <%= form.text_field :recipe_tags, placeholder: "Tags" %>
+      <%= form.text_field :recipe_tags, placeholder: "Tags" ,:style => 'width:200px;height:100px'%>
     </div>
     </div>
-      <%= form.submit %>
+      <%= form.submit :style => 'width:170px;height:40px;font:bold 15px arial;background-color:white;position:absolute;right:285px;left:285px;bottom:50px'%>
     <% end %>
     <style>
       .container{
         position: absolute;
+
+                   left:400px;
                    padding: 120px;
-                   right: 1px;
-                   bottom:1px;
+                   right: 10px;
+                   bottom:20px;
         z-index:10000000000;
 
       }
