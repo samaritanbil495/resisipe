@@ -71,10 +71,14 @@
           <%= @recipe.recipe_tags %>
           <br>
           <br>
+          <h5 class= "card-text"><strong> ID :</strong> </h5>
+          <%= @recipe.recipe_id %>
+          <br>
+          <br>
           <div class=rm>
           <%= link_to 'Remove' , recipe_path(@recipe), method: :delete, data: { confirm: 'Are you sure delete this recipe?' } %>
           <%=link_to 'Edit  ',{:action => "edit", :controller => "recipes", :anchor => "id" }%>
-
+          
 
           </div>
           <br>

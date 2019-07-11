@@ -53,15 +53,13 @@
          </div>
 
         <div class= "needs-validation">
-          <h3> Let's share your recipe with us ! </h3>
+          <h3> Let's share your recipe with us !</h3>
 
             <%= form_with model: @recipe do |form| %>
-
           <%# <form class="needs-validation" novalidate> %>
                 <div class="form-row">
                   <div class="col-md-4 mb-3">
                     <%= form.text_field :recipe_name, placeholder: "Recipe Name" %>
-
                     <%# <label for="validationTooltip01">Recipe Name</label> %>
                     <%# <input type="text" class="form-control" id="validationTooltip01"  placeholder="First name" value="Pancake" required> %>
                     <div class="valid-tooltip">
@@ -72,7 +70,6 @@
                   <div class="form-row">
                   <div class="col-md-4 mb-3">
                     <%= form.text_field :recipe_detail, placeholder: "Detail" %>
-
                     <%# <label for="validationTooltip02">Recipe Details</label> %>
                     <%# <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Take a cup,break egg into the cup..." required> %>
                     <div class="valid-tooltip">
@@ -92,11 +89,10 @@
                     </div>
                   </div>
                 </div>
-
+                    <%= form.hidden_field :recipe_id %>
                 <div class="form-row">
                   <div class="col-md-4 mb-3">
                     <%= form.text_field :recipe_ingredients, placeholder: "Ingredients" %>
-
                     <%# <label for="validationTooltip03">Ingredients</label> %>
                     <%# <input type="text" class="form-control" id="validationTooltip03" placeholder="Olive oil,potata..." required> %>
                     <div class="invalid-tooltip">
@@ -104,8 +100,7 @@
                     </div>
                 </div>
                 </div>
-
-             <div class=container>
+              <div class=container>
                 <div class="form-row">
                 <div class="col-md-4 mb-3">
                   </div>
