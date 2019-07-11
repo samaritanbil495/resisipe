@@ -1,9 +1,9 @@
 class RecipesController < ApplicationController
 
   
-
+  protect_from_forgery with: :exception
   before_action :current_recipe, only: [:show, :edit, :update, :destroy]
-
+  
 
   def index
      @recipes = Recipe.searchTag(params[:searchTag])
