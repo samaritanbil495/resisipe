@@ -1,5 +1,5 @@
 class Recipe < ApplicationRecord
-  
+mount_uploader :image, ImageUploader  
 
     def self.searchTag(searchTag)
         
