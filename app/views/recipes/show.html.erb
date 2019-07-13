@@ -59,6 +59,9 @@
 
      <h5 class="card-header"><strong><%= @recipe.recipe_name %></strong></h5>
       <div class="card-body">
+      <p><%= @recipe.likes.count %> <%= (@recipe.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+      <%= button_to 'Like', recipe_likes_path(@recipe), method: :recipe %>
+      <div><%= notice %></div>
         <h5 class="card-title "><strong>Ingredients:</strong> </h5>
          <%= @recipe.recipe_ingredients %>
          <br>
