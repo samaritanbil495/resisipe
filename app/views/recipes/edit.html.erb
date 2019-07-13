@@ -92,6 +92,16 @@
       <h3>Tags</h3>
       <%= form.text_field :recipe_tags, placeholder: "Tags" ,:style => 'width:200px;height:100px'%>
     </div>
+    <div class="col-sm-4">
+      <h3>Image</h3>
+      <% if form.object.image? %>
+      <%= image_tag(@recipe.image.url, alt:'Image') if @recipe.image?%>
+      <%= form.file_field :image %>
+      <% else %>
+      <%= form.file_field :image %>
+      <%= form.hidden_field :image_cache %>
+      <% end %>
+
     </div>
       <%= form.submit :style => 'width:170px;height:40px;font:bold 15px arial;background-color:white;position:absolute;right:285px;left:285px;bottom:50px'%>
     <% end %>
