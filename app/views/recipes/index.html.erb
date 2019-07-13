@@ -21,7 +21,6 @@
               <%=link_to 'Add Recipe',"/recipes/new",{:style=>'color:#FFFFFF;border-style:solid;width:100px;text-align:center', :class => "css_class"}%>
             </a>
 
-
             <a class="navbarbtn" >
 
 
@@ -91,6 +90,8 @@
                           <ul>
                           <% @recipes.each do |recipe| %>
                             <li><%= link_to recipe.recipe_name,recipe_path(recipe) ,{:style=>'color:#FFFFFF;', :class => "css_class"}%></li>
+                            <p><%= recipe.likes.count %> <%= (recipe.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+
                           <% end %>
                         </ul>
                 </h5>
