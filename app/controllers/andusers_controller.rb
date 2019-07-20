@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class AndusersController < ApplicationController
   protect_from_forgery with: :null_session
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
@@ -6,6 +6,8 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+
+    render json: @users, status: :ok
   end
 
   # GET /users/1

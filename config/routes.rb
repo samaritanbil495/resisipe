@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'andusers/index'
+
+  get 'andusers/show'
+
+  get 'andusers/new'
+
+  get 'andusers/edit'
+
   root 'home#index'
   
   resources :users
@@ -18,6 +26,14 @@ Rails.application.routes.draw do
   get 'home/index'
 
 Rails.application.routes.draw do
+  get 'andusers/index'
+
+  get 'andusers/show'
+
+  get 'andusers/new'
+
+  get 'andusers/edit'
+
   get 'sessions/new'
 
   get 'sessions/create'
