@@ -1,7 +1,4 @@
 class RecipesController < ApplicationController
-
-  
-  protect_from_forgery with: :exception
   before_action :current_recipe, only: [:show, :edit, :update, :destroy]
   
 
@@ -14,8 +11,15 @@ class RecipesController < ApplicationController
   end
 
   def new
-    @recipe = Recipe.new
-    @recipe.recipe_id = current_user.id
+    if current_user
+      @recipe = Recipe.new
+      @recipe.recipe_id = current_user.id
+      
+    else
+      @recipe = Recipe.new
+    end
+ 
+    
   end
 
   def create
