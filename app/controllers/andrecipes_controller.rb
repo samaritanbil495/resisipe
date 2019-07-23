@@ -1,6 +1,7 @@
 class AndrecipesController < ApplicationController
   protect_from_forgery with: :exception
   skip_before_action :verify_authenticity_token
+
   def index
     @recipes = Recipe.all
 
@@ -11,7 +12,7 @@ class AndrecipesController < ApplicationController
   end
   
   def recipe_params
-    params.permit(:recipe_name, :recipe_detail, :recipe_ingredients, :recipe_tags)
+    params.permit(:recipe_name, :recipe_detail, :recipe_ingredients, :recipe_tags,:image)
   end
 
   def new

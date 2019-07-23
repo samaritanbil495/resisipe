@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'andusers/edit'
 
+  get 'likes/index'
+
   root 'home#index'
   
   resources :users
