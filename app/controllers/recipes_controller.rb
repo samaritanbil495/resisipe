@@ -1,13 +1,13 @@
 class RecipesController < ApplicationController
   before_action :current_recipe, only: [:show, :edit, :update, :destroy]
-  
-
+  protect_from_forgery with: :null_session
+  skip_before_action :verify_authenticity_token
   def index
      @recipes = Recipe.searchTag(params[:searchTag])
   end
 
   def show
-
+    puts @recipe.image
   end
 
   def new
