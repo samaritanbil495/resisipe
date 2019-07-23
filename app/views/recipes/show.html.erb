@@ -76,9 +76,7 @@
           <%= @recipe.recipe_tags %>
           <br>
           <br>
-          <h5 class= "card-text"><strong> Recipe created by :</strong> </h5>
-          <%= User.find(@recipe.recipe_id).nickname%>
-          <br>
+
           <br>
           <div class=rm>
           <%= link_to 'Remove' , recipe_path(@recipe), method: :delete, data: { confirm: 'Are you sure delete this recipe?' } %>

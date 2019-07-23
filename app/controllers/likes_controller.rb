@@ -3,11 +3,8 @@
 	    skip_before_action :verify_authenticity_token
 
 	   def create
-	     if already_liked?
-	      flash[:notice] = "You can't like more than once"
-	    else
-	      @recipe.likes.create(user_id: current_user.id)
-	    end
+	      @recipe.likes.create(user_id: 1)
+
 	    redirect_to recipe_path(@recipe)
 	   end
 
