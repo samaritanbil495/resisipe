@@ -95,7 +95,7 @@
     <div class="col-sm-4">
       <h3>Image</h3>
       <% if form.object.image? %>
-      <%= image_tag(@recipe.image.url, alt:'Image') if @recipe.image?%>
+      <%= image_tag(@recipe.image.url, alt:'Image',:style=>'height: auto;width: auto;max-width: 300px;max-height: 300px;' )if @recipe.image?%>
       <%= form.file_field :image %>
       <% else %>
       <%= form.file_field :image %>
