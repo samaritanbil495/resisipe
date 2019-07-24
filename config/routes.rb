@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'andlikes/index'
+
+  get 'andlikes/show'
+
+  get 'andlikes/new'
+
+  get 'andlikes/edit'
+
   get 'andusers/index'
 
   get 'andusers/show'
@@ -28,6 +36,14 @@ Rails.application.routes.draw do
   get 'home/index'
 
 Rails.application.routes.draw do
+  get 'andlikes/index'
+
+  get 'andlikes/show'
+
+  get 'andlikes/new'
+
+  get 'andlikes/edit'
+
   get 'andusers/index'
 
   get 'andusers/show'
