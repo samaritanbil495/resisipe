@@ -65,7 +65,8 @@
         <h5 class="card-title "><strong>Ingredients:</strong> </h5>
          <%= @recipe.recipe_ingredients %>
          <br>
-            <%= image_tag(@recipe.image.url, alt:'Image',:style=>'height: auto;width: auto;max-width: 300px;max-height: 300px;') if @recipe.image?%>
+
+            <%= image_tag(@recipe.image.url, alt:'Image',:style=>'height: auto;width: auto;max-width: 300px;max-height: 300px;' ) if @recipe.image?%>
           <br>
          <br>
           <h5 class="card-text"><strong>How to make ?</strong><br></h5>
@@ -76,7 +77,9 @@
           <%= @recipe.recipe_tags %>
           <br>
           <br>
-
+          <h5 class= "card-text"><strong> Recipe created by :</strong> </h5>
+          <%= User.find(@recipe.recipe_id).nickname%>
+          <br>
           <br>
           <div class=rm>
           <%= link_to 'Remove' , recipe_path(@recipe), method: :delete, data: { confirm: 'Are you sure delete this recipe?' } %>
